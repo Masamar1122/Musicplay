@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Player</title>
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -19,12 +20,19 @@
           </div>
         </div>
         <ul class="text-navbar">
-          <li><a href="index.html" class="active">Music</a></li>
-          <li><a href="./Game/index.html">Game</a></li>
-          <li><a href="./Editor/index.html">Editor</a></li>
-        </ul>
-      </nav>
-      </div>
+          <li><a href="index.html" class="active" target="_blank">Music</a></li>
+          <li><a href="./Game/index.html" target="_blank">Game</a></li>
+          <li><a href="./Editor/index.html" target="_blank">Editor</a></li>
+      	<input type="checkbox" class="checkbox" id="chk" />
+	<label class="label" for="chk">
+		<i class="fas fa-sun"></i>
+		<i class="fas fa-moon"></i>
+		<div class="ball"></div>
+	</label>
+</div>
+</ul>
+</nav>
+</div>
   <div class="wrapper">
     <div class="top-bar">
       <i class="material-icons">expand_more</i>
@@ -69,6 +77,12 @@
       </ul>
     </div>
   </div>
+  <script>
+  const chk = document.getElementById('chk');
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
+</script>
 
   <script src="js/music-list.js"></script>
   <script src="js/script.js"></script>
