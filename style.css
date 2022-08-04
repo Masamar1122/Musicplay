@@ -21,12 +21,13 @@
 }
 body {
   color: #fff;
+  margin-top: ;
   margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+  background: linear-gradient(-135deg, #29465B, #2B3856);
 }
 .container {
   width: 100%;
@@ -90,6 +91,56 @@ body {
 .active:hover {
   color: #CCFFFF !important;
 }
+body.dark {
+	background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+	color: white;
+}
+.container {
+  background-color: #666;
+  width: 100%;
+  height: 50px;
+}
+.checkbox {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+}
+.label {
+	background-color: #111;
+	margin-top: 3px;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1);
+}
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+.fa-moon {
+	color: #B1FB17;
+	font-size: 17px;
+}
+.fa-sun {
+	color: #B1FB17;
+	font-size: 18px;
+}
 .wrapper{
   width: 380px;
   padding: 25px 30px;
@@ -152,7 +203,7 @@ body {
   height: 6px;
   width: 100%;
   border-radius: 50px;
-  background: #666;
+  background: #BCC6CC;
   cursor: pointer;
 }
 .progress-area .progress-bar{
@@ -225,7 +276,7 @@ body {
   height: 43px;
   width: 43px;
   border-radius: inherit;
-  background: #43BFC7;
+  background: #033E3E;
 }
 .play-pause i{
   height: 43px;
